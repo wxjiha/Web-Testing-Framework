@@ -45,4 +45,14 @@ public class HomePage extends PageObject {
 
 
 
+    @FindBy(css = ".hrefch")
+    private List<WebElementFacade> productLinks;
+
+    @FindBy(css = ".btn-success")
+    private List<WebElementFacade> addToCartButtons;
+
+    public void addFirstProductToCart() {
+        productLinks.get(0).click();
+        addToCartButtons.get(0).click();
+    }
 }
