@@ -6,6 +6,8 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import net.thucydides.core.annotations.Managed;
+import org.openqa.selenium.Alert;
+import pages.CartPage;
 import pages.HomePage;
 import pages.ProductPage;
 
@@ -19,6 +21,9 @@ public class CartStepDefs {
 
     @Managed
     ProductPage productPage;
+
+    @Managed
+    CartPage cartPage;
 
     @Given("I am on the homepage")
     public void iAmOnTheHomepage() {
@@ -44,5 +49,30 @@ public class CartStepDefs {
     public void iShouldLandOnTheProductDetailPageFor(String productName) {
         assertThat(homePage.getDriver().getCurrentUrl(), containsString("/prod.html"));
         assertThat(productPage.getProductName(), is(productName));
+    }
+
+    @When("I am on the product detail page")
+    public void iAmOnTheProductDetailPage() {
+    }
+
+    @And("I click Add to Cart")
+    public void iClickAddToCart() {
+        productPage.clickAddToCart();
+    }
+
+    @Then("I should see a confirmation alert")
+    public void iShouldSeeAConfirmationAlert() {
+        Alert alert = productPage.waitForAlert();
+        assertThat(alert.getText(), is("Product added"));
+        alert.accept();
+    }
+
+    @And("On the cart page, I should have {string} items in my cart")
+    public void onTheCartPageIsOneOfInMyCart(String productCount) {
+
+        int productCountInt = Integer.parseInt(productCount);
+
+        productPage.clickGoToCart();
+        assertThat(cartPage.getCartItems().size(), is(productCountInt));
     }
 }

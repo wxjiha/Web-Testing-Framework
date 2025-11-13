@@ -20,3 +20,17 @@ Feature: Cart
       | Nexus 6           |
       | Sony vaio i7      |
       | Samsung galaxy s6 |
+
+  @Happy
+  Scenario Outline: Adding a Product to Cart
+    Given I am on the homepage
+    And I click on the "<productName>"
+    When I am on the product detail page
+    And I click Add to Cart
+    Then I should see a confirmation alert
+    And On the cart page, I should have "<productNumber>" items in my cart
+    Examples:
+      | productNumber | productName       |
+      | 1              | Nexus 6           |
+      | 2              | Sony vaio i7      |
+      | 3              | Samsung galaxy s6 |
