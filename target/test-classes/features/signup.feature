@@ -8,10 +8,10 @@ Feature: Signup
   Scenario: Signup with valid username and valid password
     Given I am on the home page
     And I have clicked on the signup button
-    When I enter a new username "Krish"
-    And I enter a password "Kumari"
+    When I enter a new username "KrishPriya"
+    And I enter a password "Kumari123"
     And I click the signup confirmation button
-    Then I should see a popup message saying "This user already exist."
+    Then I should see a popup message saying "Sign up successful."
 
   @Sad
   Scenario Outline: Signup with invalid or missing information
