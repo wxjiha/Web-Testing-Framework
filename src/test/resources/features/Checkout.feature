@@ -27,13 +27,11 @@ Feature: Checkout
     And I click on Purchase
     Then the system should display an alert "Please fill out Name and Credit card"
 
-  @Negative # Known defect: See GitHub Issue #1
+  @Negative @KnownDefect
   Scenario: Checkout works with empty cart
     Given the cart is empty and checkout is opened
-    When the user enters "Name" and "Credit Card"
-    And the user clicks purchase
+    When I enter name and credit card details
+    And I click purchase
     Then a confirmation popup should appear
     And the message should include order ID, amount, and card number
-    # Note: In a real system, this should not succeed with empty cart
-
-
+    # Note: In a real system, this should not succeed with an empty cart
