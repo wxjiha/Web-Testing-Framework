@@ -2,6 +2,7 @@ package steps;
 
 import io.cucumber.java.PendingException;
 import io.cucumber.java.en.*;
+import net.thucydides.core.annotations.Managed;
 import pages.CheckoutPage;
 import pages.HomePage;
 
@@ -10,7 +11,10 @@ import static org.hamcrest.Matchers.*;
 
 public class CheckoutStepdefs {
 
+    @Managed
     HomePage homepage;
+
+    @Managed
     CheckoutPage checkoutPage;
 
     @Given("I have a product in cart")

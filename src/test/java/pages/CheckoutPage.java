@@ -3,10 +3,21 @@ package pages;
 import net.serenitybdd.core.pages.PageObject;
 import net.serenitybdd.core.pages.WebElementFacade;
 import net.thucydides.core.annotations.DefaultUrl;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+
+import java.util.List;
 
 @DefaultUrl("https://demoblaze.com/cart.html")
 public class CheckoutPage extends PageObject {
+
+    @FindBy(id = "tbodyid")
+    private WebElementFacade cartTable;
+
+    @FindBy(id = "totalp")
+    private WebElementFacade totalPrice;
 
     @FindBy(css = ".btn.btn-success")
     private WebElementFacade placeOrderBtn;
@@ -29,6 +40,27 @@ public class CheckoutPage extends PageObject {
 
     @FindBy(className = "sweet-alert")
     private WebElementFacade thankYouMessage;
+
+
+    public List<WebElement> getCartItems(){
+        return cartTable.findElements(By.className("success"));
+    }
+
+    public void clickSpecifiedDeleteButton(int index){
+        WebElement cartItem = getCartItems().get(index);
+        WebElement deleteCell = cartItem.findElements(By.tagName("td")).get(3);
+        WebElement deleteBtn = deleteCell.findElement(By.tagName("a"));
+        deleteBtn.click();
+    }
+
+    public void clickFirstDeleteButton(){
+        clickSpecifiedDeleteButton(0);
+    }
+
+    public void waitForCartToBeEmpty() {
+        //Note: Serenity/Selenium is annoying and this will run for like 15 seconds or w/ever the default wait time is
+        waitForCondition().until(ExpectedConditions.numberOfElementsToBe(By.className("success"), 0));
+    }
 
     public void clickPlaceOrderBtn() {
         placeOrderBtn.click();
@@ -56,4 +88,7 @@ public class CheckoutPage extends PageObject {
         return getDriver().switchTo().alert().getText();
     }
 
+    public String getTotalPrice() {
+        return totalPrice.getText();
+    }
 }
