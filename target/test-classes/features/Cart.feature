@@ -28,7 +28,7 @@ Feature: Cart
     When I am on the product detail page
     And I click Add to Cart
     Then I should see a confirmation alert
-    And On the cart page, I have "<productNumber>" items in my cart
+    And On the cart page, I should have "<productNumber>" items in my cart
     Examples:
       | productNumber | productName       |
       | 1              | Nexus 6           |

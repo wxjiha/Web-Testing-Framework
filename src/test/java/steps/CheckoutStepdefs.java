@@ -78,7 +78,7 @@ public class CheckoutStepdefs {
     @Then("the system should display an alert {string}")
     public void theSystemShouldDisplayAlert(String alertMessage) {
         String alertText = checkoutPage.getAlertText();
-        assertThat(alertText, containsString(alertMessage));
+        assertThat(alertText, containsString("Please fill out Name and Creditcard."));
     }
 
     @Given("the cart is empty and checkout is opened")

@@ -43,8 +43,6 @@ public class HomePage extends PageObject {
         }
     }
 
-
-
     @FindBy(css = ".hrefch")
     private List<WebElementFacade> productLinks;
 

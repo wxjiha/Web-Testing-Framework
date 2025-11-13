@@ -18,7 +18,7 @@ Feature: Checkout
       | Alice | UK      | London     | 9876543210 | 06    | 2027 |
       | Bob   | Canada  | Toronto    | 5555555555 | 11    | 2024 |
 
-  @Negative
+  @SadPath
   Scenario: User tries to place an order without entering Name and Credit Card
     Given I have a product in cart
     When I click the place order button
@@ -27,11 +27,14 @@ Feature: Checkout
     And I click on Purchase
     Then the system should display an alert "Please fill out Name and Credit card"
 
-  @Negative @KnownDefect
+  @SadPath # Known defect: See GitHub Issue #1
   Scenario: Checkout works with empty cart
     Given the cart is empty and checkout is opened
+    And I click the place order button
     When I enter name and credit card details
-    And I click purchase
+    And I click on Purchase
     Then a confirmation popup should appear
     And the message should include order ID, amount, and card number
-    # Note: In a real system, this should not succeed with an empty cart
+    # Note: In a real system, this should not succeed with empty cart
+
+
