@@ -9,6 +9,7 @@ import org.openqa.selenium.support.FindBy;
 
 import java.util.List;
 
+@DefaultUrl("https://www.demoblaze.com/")
 public class HomePage extends PageObject{
 
     @FindBy(id = "login2")
@@ -102,6 +103,10 @@ public class HomePage extends PageObject{
     public void addFirstProductToCart() {
         productLinks.get(0).click();
         addToCartButtons.get(0).click();
+    }
+
+    public boolean isLoginButtonVisible() {
+        return loginNavButton.isVisible();
     }
 
 }
