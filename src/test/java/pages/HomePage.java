@@ -1,18 +1,18 @@
 package pages;
 
-
 import net.serenitybdd.core.pages.WebElementFacade;
 import net.thucydides.core.annotations.DefaultUrl;
 import net.thucydides.core.pages.PageObject;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-@DefaultUrl("https://demoblaze.com/")
+import java.util.List;
+
 public class HomePage extends PageObject{
 
-    // NAVBAR ELEMENTS
     @FindBy(id = "login2")
-    private WebElementFacade loginNavButton;   // Opens login modal
+    private WebElementFacade loginNavButton;
 
     @FindBy(id = "logout2")
     private WebElementFacade logoutButton;
@@ -30,33 +30,78 @@ public class HomePage extends PageObject{
     @FindBy(xpath = "//button[text()='Log in']")
     private WebElementFacade loginButton;
 
-    // ===== METHODS =====
+
 
     public void openLoginModal() {
-        loginNavButton.click();  // Click login button on navbar
+        loginNavButton.click();
     }
 
     public void enterUserName(String username) {
-        userNameField.type(username);  // Type username in modal
+        userNameField.type(username);
     }
 
     public void enterPassword(String password) {
-        passwordField.type(password);  // Type password in modal
+        passwordField.type(password);
     }
 
     public void clickLoginButton() {
-        loginButton.click();  // Click login in modal
+        loginButton.click();
     }
 
     public boolean isUserLoggedIn() {
-        return loggedInUserName.isDisplayed();  // Check if username is visible
+        return loggedInUserName.isDisplayed();
     }
 
     public String getLoggedInUserName() {
-        return loggedInUserName.getText();  // Get text of logged in user
+        return loggedInUserName.getText();
     }
 
     public void clickLogoutButton() {
-        logoutButton.click();  // Click logout
+        logoutButton.click();
     }
+
+    @FindBy(className = "list-group")
+    private WebElementFacade categoriesElement;
+
+    private List<WebElement> getCategoriesElements(){
+        return categoriesElement.findElements(By.id("itemc"));
+    }
+
+    public void clickMonitorsBtn(){
+        List<WebElement> categories = getCategoriesElements();
+        categories.get(2).click();
+    }
+
+    public List<WebElement> getItems(){
+        WebElement items = find(By.id("tbodyid"));
+        return items.findElements(By.className("card"));
+    }
+
+    public int itemsCount(){
+        return getItems().size();
+    }
+
+    public void clickItem(String itemName){
+        for (WebElement card : getItems()){
+            WebElement name = card.findElement(By.className("hrefch"));
+            if (name.getText().equals(itemName)){
+                name.click();
+                break;
+            }
+        }
+    }
+
+
+
+    @FindBy(css = ".hrefch")
+    private List<WebElementFacade> productLinks;
+
+    @FindBy(css = ".btn-success")
+    private List<WebElementFacade> addToCartButtons;
+
+    public void addFirstProductToCart() {
+        productLinks.get(0).click();
+        addToCartButtons.get(0).click();
+    }
+
 }

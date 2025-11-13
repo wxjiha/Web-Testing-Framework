@@ -1,4 +1,5 @@
 package runners;
+
 import io.cucumber.junit.CucumberOptions;
 import net.serenitybdd.cucumber.CucumberWithSerenity;
 import org.junit.runner.RunWith;
@@ -13,5 +14,7 @@ import org.junit.runner.RunWith;
                 "json:target/jsonReport.json"
         },
         publish = true
-) class TestRunner {
+
+) public class TestRunners {
+
 }
