@@ -27,4 +27,5 @@ Feature: Signup
       | standard_use | Pass123  | This user already exist.               |
       | new_user123  |          | Please fill out Username and Password. |
       |              | Pass123  | Please fill out Username and Password. |
+      |              |          |                                        |
 
