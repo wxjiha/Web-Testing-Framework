@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="0" failures="3" name="Contact Form" skipped="0" tests="3" time="1.6" timestamp="2025-11-13 09:16:23"><testcase name="Submit valid contact messages using Data Table"><failure message="Undefined default URL for page object ContactPage" type="java.lang.AssertionError">Undefined default URL for page object ContactPage</failure><system-err>Undefined default URL for page object ContactPage&#13;
+steps.ContactStepDef.iAmOnTheHomePageForContactForm(ContactStepDef.java:72)&#13;
+✽.I am on the home page for contact form(file:///C:/Sathya/WebTesting/Web-Testing-Framework/src/test/resources/features/contact.feature:10)&#13;
+</system-err></testcase><testcase name="Close button hides the Contact modal"><failure message="Undefined default URL for page object ContactPage" type="java.lang.AssertionError">Undefined default URL for page object ContactPage</failure><system-err>Undefined default URL for page object ContactPage&#13;
+steps.ContactStepDef.iAmOnTheHomePageForContactForm(ContactStepDef.java:72)&#13;
+✽.I am on the home page for contact form(file:///C:/Sathya/WebTesting/Web-Testing-Framework/src/test/resources/features/contact.feature:20)&#13;
+</system-err></testcase><testcase name="Contact form submits successfully with empty fields"><failure message="Undefined default URL for page object ContactPage" type="java.lang.AssertionError">Undefined default URL for page object ContactPage</failure><system-err>Undefined default URL for page object ContactPage&#13;
+steps.ContactStepDef.iAmOnTheHomePageForContactForm(ContactStepDef.java:72)&#13;
+✽.I am on the home page for contact form(file:///C:/Sathya/WebTesting/Web-Testing-Framework/src/test/resources/features/contact.feature:27)&#13;
+</system-err></testcase></testsuite>

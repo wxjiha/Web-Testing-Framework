@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="0" failures="0" name="Contact Form" skipped="0" tests="3" time="21.38" timestamp="2025-11-14 10:52:43"><testcase name="Submit valid contact messages using Data Table"/><testcase name="Close button hides the Contact page"/><testcase name="Contact form submits successfully with empty fields"/></testsuite>

@@ -5,13 +5,18 @@ Feature: Signup
   I want to be able to create an account successfully
 
   @Happy
-  Scenario: Signup with valid username and valid password
+  Scenario Outline: Signup with valid username and valid password
     Given I am on the home page
     And I have clicked on the signup button
-    When I enter a new username "KrishPriya"
-    And I enter a password "Kumari123"
+    When I enter a new username "<Newusers>"
+    And I enter a password "<password>"
     And I click the signup confirmation button
-    Then I should see a popup message saying "Sign up successful."
+    Then I should see a popup message saying "<message>"
+
+    Examples:
+      | Newusers | password | message             |
+      | Charan   | Joy89    | Sign up successful. |
+      | 90875    | &*^$)    | Sign up successful. |
 
   @Sad
   Scenario Outline: Signup with invalid or missing information

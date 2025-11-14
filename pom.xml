@@ -90,6 +90,12 @@
             <scope>test</scope>
 
         </dependency>
+        <dependency>
+            <groupId>net.serenity-bdd</groupId>
+            <artifactId>serenity-core</artifactId>
+            <version>3.9.8</version>
+        </dependency>
+
 
     </dependencies>
 
