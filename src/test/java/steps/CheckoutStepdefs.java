@@ -102,7 +102,6 @@ public class CheckoutStepdefs {
             Alert alert = getDriver().switchTo().alert();
             alert.accept();
         } catch (Exception ignored) {
-            // No alert means modal-based confirmation — ignore for defect scenario
         }
     }
 
