@@ -1,5 +1,4 @@
 # Web-Testing-Framework
-# Web Testing Project
 
 ## Goal of the Project
 The goal of this project is to automate the testing of the [Demoblaze](https://demoblaze.com/index.html) web application to ensure its functionality, reliability, and performance. This project focuses on testing key user interactions such as browsing products, adding items to the cart, and completing transactions.
@@ -25,8 +24,7 @@ Execute all tests with:
    ```bash
    mvn test
 
-What Was Tested
-The automated tests cover:
+What Was Tested:
 
 - Navigation through product categories
 - Product detail viewing
