@@ -6,7 +6,7 @@ Feature: Login
 
   @Happy
   Scenario: Login with valid username and valid password
-    Given  I am on the home page
+    Given  I am on the home page for logging in
     And have clicked on the login button
     And  I entered the username "goodtest"
     And I entered the password  "password"

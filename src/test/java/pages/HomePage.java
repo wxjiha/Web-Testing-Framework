@@ -9,6 +9,7 @@ import org.openqa.selenium.support.FindBy;
 
 import java.util.List;
 
+@DefaultUrl("https://www.demoblaze.com")
 public class HomePage extends PageObject{
 
     @FindBy(id = "login2")

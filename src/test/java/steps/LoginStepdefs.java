@@ -17,8 +17,8 @@ public class LoginStepdefs {
     WebDriver driver;
     HomePage homePage;
 
-    @Given("I am on the home page")
-    public void iAmOnTheHomePage() {
+    @Given("I am on the home page for logging in")
+    public void iAmOnTheHomePageForLogging() {
         homePage.open();
     }
 
