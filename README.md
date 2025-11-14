@@ -36,9 +36,9 @@ What Was Tested:
 Tests are implemented in src/test and use Selenium WebDriver for browser automation.
 
 Test Metrics
-- Total Tests: X
-- Passed Tests: X
-- Failed Tests: X
-- Skipped Tests: X
-- Execution Time: XX minutes
+- Total Tests: 30
+- Passed Tests: 27
+- Failed Tests: 1
+- Skipped Tests: 2
+
 
