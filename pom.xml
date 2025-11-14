@@ -18,11 +18,11 @@
     <dependencies>
 
 
-        <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter</artifactId>
-            <version>5.10.0</version>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>org.junit.jupiter</groupId>-->
+<!--            <artifactId>junit-jupiter</artifactId>-->
+<!--            <version>5.10.0</version>-->
+<!--        </dependency>-->
         <!--        <dependency>-->
         <!--            <groupId>org.seleniumhq.selenium</groupId>-->
         <!--            <artifactId>selenium-java</artifactId>-->
@@ -35,11 +35,11 @@
         </dependency>
 
         <!-- Serenity JUnit: Main Serenity BDD library with JUnit 5 integration -->
-        <dependency>
-            <groupId>net.serenity-bdd</groupId>
-            <artifactId>serenity-junit5</artifactId>
-            <version>3.9.8</version>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>net.serenity-bdd</groupId>-->
+<!--            <artifactId>serenity-junit5</artifactId>-->
+<!--            <version>3.9.8</version>-->
+<!--        </dependency>-->
         <dependency>
             <groupId>io.cucumber</groupId>
             <artifactId>cucumber-java</artifactId>
@@ -70,12 +70,12 @@
             <version>3.9.8</version>
             <scope>test</scope>
         </dependency>
-        <dependency>
-            <groupId>net.serenity-bdd</groupId>
-            <artifactId>serenity-junit5</artifactId>
-            <version>3.9.8</version>
-            <scope>test</scope>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>net.serenity-bdd</groupId>-->
+<!--            <artifactId>serenity-junit5</artifactId>-->
+<!--            <version>3.9.8</version>-->
+<!--            <scope>test</scope>-->
+<!--        </dependency>-->
 
         <dependency>
             <groupId>org.hamcrest</groupId>

@@ -1,1 +1,81 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="0" failures="0" name="Login" skipped="0" tests="3" time="16.87" timestamp="2025-11-13 11:55:46"><testcase name="Login with valid username and valid password"/><testcase name="Login with an invalid username and valid password"/><testcase name="Login with an valid username and invalid password"/></testsuite>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="4" failures="0" name="Login" skipped="0" tests="6" time="37.55" timestamp="2025-11-14 12:19:51"><testcase name="Login with valid username and valid password"><error message="Timed out after 10 seconds. Element not available&#10;Build info: version: '4.10.0', revision: 'c14d967899'&#10;System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.9'&#10;Driver info: driver.version: unknown&#10;Build info: version: '4.10.0', revision: 'c14d967899'&#10;System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.9'&#10;Driver info: driver.version: unknown" type="org.openqa.selenium.ElementNotInteractableException">Timed out after 10 seconds. Element not available
+Build info: version: '4.10.0', revision: 'c14d967899'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.9'
+Driver info: driver.version: unknown
+Build info: version: '4.10.0', revision: 'c14d967899'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.9'
+Driver info: driver.version: unknown</error><system-err>Timed out after 10 seconds. Element not available
+Build info: version: '4.10.0', revision: 'c14d967899'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.9'
+Driver info: driver.version: unknown
+Build info: version: '4.10.0', revision: 'c14d967899'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.9'
+Driver info: driver.version: unknown&#13;
+pages.HomePage.isUserLoggedIn(HomePage.java:66)&#13;
+steps.LoginStepdefs.lambda$myUsernameShouldBeVisibleOnTheNavbar$0(LoginStepdefs.java:54)&#13;
+steps.LoginStepdefs.myUsernameShouldBeVisibleOnTheNavbar(LoginStepdefs.java:54)&#13;
+✽.my username should be visible on the navbar(file:///D:/Chris/Documents/Sparta/Training/Project/Web-Testing-Framework/src/test/resources/features/Login.feature:15)&#13;
+</system-err></testcase><testcase name="Login with an invalid username and valid password"><error message="no such alert&#10;  (Session info: chrome=142.0.7444.135)&#10;Build info: version: '4.10.0', revision: 'c14d967899'&#10;System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.9'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [abf171fdc510be5910d75688d542cb9c, getAlertText {}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 142.0.7444.135, chrome: {chromedriverVersion: 142.0.7444.162 (c076baf266c..., userDataDir: C:\Users\Chris\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53170}, goog:processID: 11308, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53170/devtoo..., se:cdpVersion: 142.0.7444.135, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}&#10;Session ID: abf171fdc510be5910d75688d542cb9c&#10;Build info: version: '4.10.0', revision: 'c14d967899'&#10;System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.9'&#10;Driver info: driver.version: unknown" type="org.openqa.selenium.NoAlertPresentException">no such alert
+  (Session info: chrome=142.0.7444.135)
+Build info: version: '4.10.0', revision: 'c14d967899'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.9'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [abf171fdc510be5910d75688d542cb9c, getAlertText {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 142.0.7444.135, chrome: {chromedriverVersion: 142.0.7444.162 (c076baf266c..., userDataDir: C:\Users\Chris\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53170}, goog:processID: 11308, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53170/devtoo..., se:cdpVersion: 142.0.7444.135, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: abf171fdc510be5910d75688d542cb9c
+Build info: version: '4.10.0', revision: 'c14d967899'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.9'
+Driver info: driver.version: unknown</error><system-err>no such alert
+  (Session info: chrome=142.0.7444.135)
+Build info: version: '4.10.0', revision: 'c14d967899'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.9'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [abf171fdc510be5910d75688d542cb9c, getAlertText {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 142.0.7444.135, chrome: {chromedriverVersion: 142.0.7444.162 (c076baf266c..., userDataDir: C:\Users\Chris\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53170}, goog:processID: 11308, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53170/devtoo..., se:cdpVersion: 142.0.7444.135, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: abf171fdc510be5910d75688d542cb9c
+Build info: version: '4.10.0', revision: 'c14d967899'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.9'
+Driver info: driver.version: unknown&#13;
+steps.LoginStepdefs.iShouldSeeAPopUpSayingUserDoesNotExist(LoginStepdefs.java:61)&#13;
+✽.I should see a pop up saying user does not exist(file:///D:/Chris/Documents/Sparta/Training/Project/Web-Testing-Framework/src/test/resources/features/Login.feature:25)&#13;
+</system-err></testcase><testcase name="Login with an valid username and invalid password"><error message="no such alert&#10;  (Session info: chrome=142.0.7444.135)&#10;Build info: version: '4.10.0', revision: 'c14d967899'&#10;System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.9'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [2231af52f5de006217437c9ceb99c94f, getAlertText {}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 142.0.7444.135, chrome: {chromedriverVersion: 142.0.7444.162 (c076baf266c..., userDataDir: C:\Users\Chris\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53192}, goog:processID: 13472, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53192/devtoo..., se:cdpVersion: 142.0.7444.135, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}&#10;Session ID: 2231af52f5de006217437c9ceb99c94f&#10;Build info: version: '4.10.0', revision: 'c14d967899'&#10;System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.9'&#10;Driver info: driver.version: unknown" type="org.openqa.selenium.NoAlertPresentException">no such alert
+  (Session info: chrome=142.0.7444.135)
+Build info: version: '4.10.0', revision: 'c14d967899'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.9'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [2231af52f5de006217437c9ceb99c94f, getAlertText {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 142.0.7444.135, chrome: {chromedriverVersion: 142.0.7444.162 (c076baf266c..., userDataDir: C:\Users\Chris\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53192}, goog:processID: 13472, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53192/devtoo..., se:cdpVersion: 142.0.7444.135, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 2231af52f5de006217437c9ceb99c94f
+Build info: version: '4.10.0', revision: 'c14d967899'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.9'
+Driver info: driver.version: unknown</error><system-err>no such alert
+  (Session info: chrome=142.0.7444.135)
+Build info: version: '4.10.0', revision: 'c14d967899'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.9'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [2231af52f5de006217437c9ceb99c94f, getAlertText {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 142.0.7444.135, chrome: {chromedriverVersion: 142.0.7444.162 (c076baf266c..., userDataDir: C:\Users\Chris\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53192}, goog:processID: 13472, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53192/devtoo..., se:cdpVersion: 142.0.7444.135, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 2231af52f5de006217437c9ceb99c94f
+Build info: version: '4.10.0', revision: 'c14d967899'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.9'
+Driver info: driver.version: unknown&#13;
+steps.LoginStepdefs.iShouldSeeAPopUpSayingWrongPassword(LoginStepdefs.java:70)&#13;
+✽.I should see a pop up saying wrong password(file:///D:/Chris/Documents/Sparta/Training/Project/Web-Testing-Framework/src/test/resources/features/Login.feature:35)&#13;
+</system-err></testcase><testcase name="Login with an empty username field and a valid password"/><testcase name="Login with an valid username and empty password field"/><testcase name="Login with valid username and valid password"><error message="Timed out after 10 seconds. Element not available&#10;Build info: version: '4.10.0', revision: 'c14d967899'&#10;System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.9'&#10;Driver info: driver.version: unknown&#10;Build info: version: '4.10.0', revision: 'c14d967899'&#10;System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.9'&#10;Driver info: driver.version: unknown" type="org.openqa.selenium.ElementNotInteractableException">Timed out after 10 seconds. Element not available
+Build info: version: '4.10.0', revision: 'c14d967899'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.9'
+Driver info: driver.version: unknown
+Build info: version: '4.10.0', revision: 'c14d967899'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.9'
+Driver info: driver.version: unknown</error><system-err>Timed out after 10 seconds. Element not available
+Build info: version: '4.10.0', revision: 'c14d967899'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.9'
+Driver info: driver.version: unknown
+Build info: version: '4.10.0', revision: 'c14d967899'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.9'
+Driver info: driver.version: unknown&#13;
+pages.HomePage.isUserLoggedIn(HomePage.java:66)&#13;
+steps.LoginStepdefs.lambda$iAmLoggedInAlready$1(LoginStepdefs.java:107)&#13;
+steps.LoginStepdefs.iAmLoggedInAlready(LoginStepdefs.java:107)&#13;
+✽.I am logged in already(file:///D:/Chris/Documents/Sparta/Training/Project/Web-Testing-Framework/src/test/resources/features/Login.feature:59)&#13;
+</system-err></testcase></testsuite>
