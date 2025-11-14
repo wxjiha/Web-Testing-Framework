@@ -1,11 +1,12 @@
 package steps;
 
-import io.cucumber.java.PendingException;
 import io.cucumber.java.en.*;
 import net.thucydides.core.annotations.Managed;
+import org.openqa.selenium.Alert;
 import pages.CheckoutPage;
 import pages.HomePage;
 
+import static net.thucydides.core.webdriver.ThucydidesWebDriverSupport.getDriver;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.*;
 
@@ -49,21 +50,20 @@ public class CheckoutStepdefs {
         assertThat("Thank you message should be displayed", checkoutPage.isThankYouMessageDisplayed(), is(true));
     }
 
-        @Then("the message should include my details, the order ID, amount, and card number")
+    @Then("the message should include my details, the order ID, amount, and card number")
     public void the_message_should_include_my_details_the_order_id_amount_and_card_number() {
         String message = checkoutPage.thankYouOrderMessage();
-
         System.out.println("Purchase message: " + message);
 
         assertThat(message, containsString("Thank you for your purchase!"));
-        assertThat (message, containsString("Id:"));
+        assertThat(message, containsString("Id:"));
         assertThat(message, containsString("Amount:"));
-        assertThat (message, containsString("Card Number:"));
+        assertThat(message, containsString("Card Number:"));
     }
 
     @And("I leave {string} blank")
     public void iLeaveFieldBlank(String field) {
-        switch(field) {
+        switch (field) {
             case "Name":
                 checkoutPage.enterName("");
                 break;
@@ -73,12 +73,12 @@ public class CheckoutStepdefs {
             default:
                 throw new IllegalArgumentException("Unknown field: " + field);
         }
-
     }
+
     @Then("the system should display an alert {string}")
     public void theSystemShouldDisplayAlert(String alertMessage) {
         String alertText = checkoutPage.getAlertText();
-        assertThat(alertText, containsString("Please fill out Name and Creditcard."));
+        assertThat(alertText, containsString(alertMessage));
     }
 
     @Given("the cart is empty and checkout is opened")
@@ -87,20 +87,28 @@ public class CheckoutStepdefs {
         checkoutPage.open();
     }
 
-    @When("the user enters {string} and {string}")
-    public void theUserEntersAnd(String name, String card) {
-        checkoutPage.enterName(name);
-        checkoutPage.enterCreditCard(card);
+    @When("I enter name and credit card details")
+    public void theUserEntersAnd() {
+        checkoutPage.enterName("Laura");
+        checkoutPage.enterCreditCard("1234567890");
     }
 
-    @And("the user clicks purchase")
+    @And("I click purchase")
     public void theUserClicks() {
+        checkoutPage.clickPlaceOrderBtn();
         checkoutPage.clickPurchaseBtn();
+
+        try {
+            Alert alert = getDriver().switchTo().alert();
+            alert.accept();
+        } catch (Exception ignored) {
+            // No alert means modal-based confirmation — ignore for defect scenario
+        }
     }
 
     @Then("a confirmation popup should appear")
     public void aConfirmationPopupShouldAppear() {
-        assertThat("Thank you for your purchase!",
+        assertThat("Thank you message should be displayed",
                 checkoutPage.isThankYouMessageDisplayed(), is(true));
     }
 
@@ -108,7 +116,6 @@ public class CheckoutStepdefs {
     public void theMessageShouldIncludeOrderIDAmountAndCardNumber() {
         String message = checkoutPage.thankYouOrderMessage();
         System.out.println("DemoBlaze popup: " + message);
-
 
         assertThat(message, containsString("Thank you for your purchase!"));
         assertThat(message, containsString("Id:"));
