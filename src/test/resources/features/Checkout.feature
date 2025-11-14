@@ -25,7 +25,7 @@ Feature: Checkout
     And I leave "Name" blank
     And I leave "Credit Card" blank
     And I click on Purchase
-    Then the system should display an alert "Please fill out Name and Credit card"
+    Then the system should display an alert "Please fill out Name and Creditcard."
 
   @Negative @KnownDefect
   Scenario: Checkout works with empty cart

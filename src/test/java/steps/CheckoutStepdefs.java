@@ -94,7 +94,7 @@ public class CheckoutStepdefs {
     }
 
     @And("I click purchase")
-    public void theUserClicks() {
+    public void theUserClicks() throws InterruptedException {
         checkoutPage.clickPlaceOrderBtn();
         checkoutPage.clickPurchaseBtn();
 

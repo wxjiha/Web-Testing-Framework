@@ -53,6 +53,17 @@ public class CartStepDefs {
         homePage.waitFor(ExpectedConditions.numberOfElementsToBe(By.cssSelector("#tbodyid .card"), 2));
         assertThat(homePage.itemsCount(), is(2));
     }
+    @And("I Add the item to cart")
+    public void iAddTheItemToCart() {
+        productPage.clickAddToCart();
+        Alert alert = productPage.waitForAlert();
+        alert.accept();
+    }
+
+    @When("I go to the cart page")
+    public void iGoToTheCartPage() {
+        productPage.clickGoToCart();
+    }
 
     @When("I click on the {string}")
     public void iClickOnThe(String productName) {

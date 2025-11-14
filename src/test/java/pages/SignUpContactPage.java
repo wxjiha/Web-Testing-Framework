@@ -1,9 +1,5 @@
 package pages;
 
-//package pages;
-
-//package com.nam.sparta.pages;
-
 import net.serenitybdd.core.pages.WebElementFacade;
 import net.thucydides.core.annotations.DefaultUrl;
 import net.thucydides.core.pages.PageObject;
@@ -11,64 +7,92 @@ import org.openqa.selenium.Alert;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
 import java.time.Duration;
 
 @DefaultUrl("https://www.demoblaze.com/")
-public class SignUpPage extends PageObject {
-
+public class SignUpContactPage extends PageObject {
 
     @FindBy(id = "signin2")
     private WebElementFacade signupButton;
 
-
     @FindBy(id = "sign-username")
     private WebElementFacade usernameField;
-
 
     @FindBy(id = "sign-password")
     private WebElementFacade passwordField;
 
-    // Better locator for the Sign Up button inside the modal
-    // This targets the footer of the active signup modal specifically
     @FindBy(css = "#signInModal .modal-footer button.btn.btn-primary")
     private WebElementFacade confirmSignupButton;
 
+    @FindBy(linkText = "Contact")
+    private WebElementFacade contactLink;
 
+    @FindBy(id = "recipient-email")
+    private WebElementFacade emailField;
 
+    @FindBy(id = "recipient-name")
+    private WebElementFacade nameField;
 
-    public void openSignupModal() throws InterruptedException {
+    @FindBy(id = "message-text")
+    private WebElementFacade messageField;
+
+    @FindBy(css = "#exampleModal .btn-primary")
+    private WebElementFacade sendMessageButton;
+
+    @FindBy(css = "#exampleModal .btn-secondary")
+    private WebElementFacade closeButton;
+
+    public void openSignupPage() {
+
         signupButton.click();
-        Thread.sleep(1000);
-
-
     }
-    public boolean isSignupModalVisible() {
+
+
+    public boolean isSignupVisible() throws InterruptedException {
         return usernameField.isVisible() && passwordField.isVisible();
     }
 
-    /** Enters username into the signup form */
     public void enterUsername(String username) {
         usernameField.type(username);
     }
 
-    /** Enters password into the signup form */
     public void enterPassword(String password) {
         passwordField.type(password);
     }
 
-
     public void clickSignup() {
         confirmSignupButton.click();
-        waitForAlert();  // wait for alert after clicking
+        waitForAlert();
     }
 
-    /** Waits explicitly for the alert to appear */
+    public void openContactPage() throws InterruptedException {
+        contactLink.click();
+        Thread.sleep(1000);
+    }
+
+    public void enterContactDetails(String email, String name, String message) {
+        emailField.type(email);
+        nameField.type(name);
+        messageField.type(message);
+    }
+
+    public void clickSendMessage() {
+        sendMessageButton.click();
+        waitForAlert();
+    }
+
+    public void clickCloseButton() {
+        closeButton.click();
+    }
+
+    public boolean isContactVisible() {
+        return emailField.isVisible();
+    }
+
     public void waitForAlert() {
         WebDriverWait wait = new WebDriverWait(getDriver(), Duration.ofSeconds(10));
         wait.until(ExpectedConditions.alertIsPresent());
     }
-
 
     public String getAlertText() {
         Alert alert = getDriver().switchTo().alert();
@@ -80,4 +104,3 @@ public class SignUpPage extends PageObject {
         alert.accept();
     }
 }
-

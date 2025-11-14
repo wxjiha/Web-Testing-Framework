@@ -10,7 +10,7 @@ import pages.SignUpContactPage;
 import java.util.List;
 import java.util.Map;
 
-public class ContactStepDef {
+public class ContactStepdefs {
 
     @Managed
     WebDriver driver;
@@ -22,7 +22,7 @@ public class ContactStepDef {
         signUpContactPage = new SignUpContactPage();
         signUpContactPage.setDriver(driver);
         signUpContactPage.open();
-        Thread.sleep(1000);
+
     }
 
     @And("I have clicked on the {string} link")
@@ -53,7 +53,8 @@ public class ContactStepDef {
     }
 
     @Then("the Contact page should not be visible")
-    public void theContactPageShouldNotBeVisible() {
+    public void theContactPageShouldNotBeVisible() throws InterruptedException {
+        Thread.sleep(1000);
         Assert.assertFalse(signUpContactPage.isContactVisible());
     }
 

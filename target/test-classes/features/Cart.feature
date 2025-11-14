@@ -35,8 +35,11 @@ Feature: Cart
       | 3              | Samsung galaxy s6 | 1800            |
 
   Scenario: Removing a Product from Cart
-    Given I have a product in cart
-    When I click on the delete button
+    Given I am on the homepage
+    And I click on the "Nexus 6"
+    And I Add the item to cart
+    When I go to the cart page
+    And I click on the delete button
     Then My cart should be empty
 
   Scenario: Quantity Changes when Product is added twice

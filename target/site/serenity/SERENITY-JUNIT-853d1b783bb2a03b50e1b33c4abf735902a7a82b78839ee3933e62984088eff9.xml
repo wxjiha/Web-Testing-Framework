@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="0" failures="5" name="Signup" skipped="0" tests="5" time="1.57" timestamp="2025-11-12 09:34:10"><testcase name="Signup with valid username and valid password"><failure message="Undefined default URL for page object SignUpPage" type="java.lang.AssertionError">Undefined default URL for page object SignUpPage</failure><system-err>Undefined default URL for page object SignUpPage&#13;
-steps.SignUpStepDefs.iAmOnTheHomePage(SignUpStepDefs.java:20)&#13;
-✽.I am on the home page(file:///C:/Sathya/WebTesting/Web-Testing-Framework/src/test/resources/features/signup.feature:9)&#13;
-</system-err></testcase><testcase name="Signup with invalid or missing information"><failure message="Undefined default URL for page object SignUpPage" type="java.lang.AssertionError">Undefined default URL for page object SignUpPage</failure><system-err>Undefined default URL for page object SignUpPage&#13;
-steps.SignUpStepDefs.iAmOnTheHomePage(SignUpStepDefs.java:20)&#13;
-✽.I am on the home page(file:///C:/Sathya/WebTesting/Web-Testing-Framework/src/test/resources/features/signup.feature:18)&#13;
-</system-err></testcase></testsuite>

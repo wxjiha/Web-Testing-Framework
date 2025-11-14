@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="0" failures="1" name="Signup" skipped="0" tests="1" time="12.6" timestamp="2025-11-12 10:17:08"><testcase name="Signup with valid username and valid password"><failure message="&#13;&#10;Expected: a string containing &quot;Sign up successful.&quot;&#13;&#10;     but: was &quot;This user already exist.&quot;" type="java.lang.AssertionError">&#13;
-Expected: a string containing "Sign up successful."&#13;
-     but: was "This user already exist."</failure><system-err>&#13;
-Expected: a string containing "Sign up successful."&#13;
-     but: was "This user already exist."&#13;
-steps.SignUpStepDefs.iShouldSeeAPopupMessageSaying(SignUpStepDefs.java:48)&#13;
-✽.I should see a popup message saying "Sign up successful."(file:///C:/Sathya/WebTesting/Web-Testing-Framework/src/test/resources/features/signup.feature:14)&#13;
-</system-err></testcase></testsuite>

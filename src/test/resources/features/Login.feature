@@ -55,7 +55,7 @@ Feature: Login
 
 
   @Happy
-  Scenario: Login with valid username and valid password
+  Scenario: Logout
     Given  I am logged in already
     When I click the log out button
     Then I should return to the home page

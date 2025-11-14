@@ -63,16 +63,9 @@
             <scope>provided</scope>
         </dependency>
 
-
         <dependency>
             <groupId>net.serenity-bdd</groupId>
             <artifactId>serenity-cucumber</artifactId>
-            <version>3.9.8</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>net.serenity-bdd</groupId>
-            <artifactId>serenity-junit5</artifactId>
             <version>3.9.8</version>
             <scope>test</scope>
         </dependency>

@@ -10,7 +10,7 @@ Feature: Contact Form
     Given I am on the home page for contact form
     And I have clicked on the "Contact" link
     And I enter the following contact information
-      | email                | name       | message |
+      | email                 | name       | message |
       | testuser1@example.com | Priya      | I would like to know more about your products. |
       | testuser2@example.com | Raj        | Can you provide pricing details? |
     When I click the "Send message" button
